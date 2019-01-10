@@ -4,10 +4,10 @@
 ## API rest server
 
 ### Author: Jared
-
+[![Build Status](https://www.travis-ci.com/jaredpattison/13-rest-server.svg?branch=master)](https://www.travis-ci.com/jaredpattison/13-rest-server)
 ### Links and Resources
-* [repo](http://xyz.com)
-* [travis](http://xyz.com)
+* [repo](https://github.com/jaredpattison/13-rest-server)
+* [travis](https://www.travis-ci.com/)
 * [back-end](http://xyz.com) (when applicable)
 * [front-end](http://xyz.com) (when applicable)
 
@@ -16,18 +16,15 @@
 * [jsdoc](http://xyz.com) (All assignments)
 
 ### Modules
-#### `modulename.js`
+#### `app.js`
+#### `categories.js`
+#### `products.js`
+
 ##### Exported Values and Methods
-
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
 
 ### Setup
 #### `.env` requirements
-* `PORT` - Port Number
+* `PORT` - 3000
 * `MONGODB_URI` - URL to the running mongo instance/db
 
 #### Running the app
