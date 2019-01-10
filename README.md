@@ -1,9 +1,9 @@
 ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 =================================================
 
-## Project Name
+## API rest server
 
-### Author: Student/Group Name
+### Author: Jared
 
 ### Links and Resources
 * [repo](http://xyz.com)
