@@ -1,0 +1,271 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "N/A",
+    "version": "1",
+    "title": "Core API"
+  },
+  "host": "localhost:3000",
+  "basePath": "/api/v1",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/categories": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "name",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "description",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "get": {
+        "description": "Get all categories",
+        "responses": {
+          "200": {
+            "description": "Returned a list of categories",
+            "schema": {
+              "$ref": "#/definitions/getAll"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create a new category",
+        "responses": {
+          "200": {
+            "description": "Returns created category",
+            "schema": {
+              "$ref": "#/definitions/single"
+            }
+          }
+        }
+      }
+    },
+    "/categoies/:id": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "name",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "description",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "get": {
+        "description": "Get a single category",
+        "responses": {
+          "200": {
+            "description": "Returned one category",
+            "schema": {
+              "$ref": "#/definitions/single"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Replace a category with the specified id",
+        "responses": {
+          "200": {
+            "description": "Returns replaced category",
+            "schema": {
+              "$ref": "#/definitions/single"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "Update a category with the specified id",
+        "responses": {
+          "200": {
+            "description": "Returns replaced category",
+            "schema": {
+              "$ref": "#/definitions/single"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete a category with the specified id",
+        "responses": {
+          "200": {
+            "description": "Returns replaced category",
+            "schema": {
+              "$ref": "#/definitions/single"
+            }
+          }
+        }
+      }
+    },
+    "/products": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "category",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "name",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "description",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "price",
+          "required": true,
+          "type": "number"
+        }
+      ],
+      "get": {
+        "description": "Get all products",
+        "responses": {
+          "200": {
+            "description": "Returned a list of products",
+            "schema": {
+              "$ref": "#/definitions/getAll"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create a new product",
+        "responses": {
+          "200": {
+            "description": "Returns created product",
+            "schema": {
+              "$ref": "#/definitions/single"
+            }
+          }
+        }
+      }
+    },
+    "/products/:id": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "category",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "name",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "description",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "price",
+          "required": true,
+          "type": "number"
+        },
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "get": {
+        "description": "Get a single product",
+        "responses": {
+          "200": {
+            "description": "Returned one product",
+            "schema": {
+              "$ref": "#/definitions/single"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Replace a product with the specified id",
+        "responses": {
+          "200": {
+            "description": "Returns replaced product",
+            "schema": {
+              "$ref": "#/definitions/single"
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "Update a product with the specified id",
+        "responses": {
+          "200": {
+            "description": "Returns replaced product",
+            "schema": {
+              "$ref": "#/definitions/single"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete a product with the specified id",
+        "responses": {
+          "200": {
+            "description": "Returns replaced product",
+            "schema": {
+              "$ref": "#/definitions/single"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "getAll": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {}
+      },
+      "example": {
+        "count:2": null,
+        "results": [
+          "{}",
+          "{}"
+        ]
+      }
+    },
+    "single": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {}
+      },
+      "example": {}
+    }
+  }
+}

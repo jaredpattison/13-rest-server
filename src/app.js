@@ -10,6 +10,7 @@ const errorHandler = require( './middleware/error.js');
 const notFound = require( './middleware/404.js' );
 const categoriesRouter = require( './api/categories.js' );
 const productsRouter = require( './api/products.js' );
+const docsRouter = require('./api/doc.js');
 
 // Prepare the express app
 const app = express();
@@ -24,6 +25,7 @@ app.use(express.urlencoded({extended:true}));
 // Routes
 app.use(categoriesRouter);
 app.use(productsRouter);
+app.use(docsRouter);
 
 // Catchalls
 app.use(notFound);

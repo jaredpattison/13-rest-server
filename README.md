@@ -8,12 +8,11 @@
 ### Links and Resources
 * [repo](https://github.com/jaredpattison/13-rest-server)
 * [travis](https://www.travis-ci.com/)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
+* [back-end](https://frozen-temple-72202.herokuapp.com/)
 
 #### Documentation
-* [swagger](http://xyz.com) (API assignments only)
-* [jsdoc](http://xyz.com) (All assignments)
+* [swagger](https://frozen-temple-72202.herokuapp.com/api/v1/doc)
+* [jsdoc](https://frozen-temple-72202.herokuapp.com/api/v1/docs)
 
 ### Modules
 #### `app.js`
@@ -29,15 +28,7 @@
 
 #### Running the app
 * `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
   
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
-
-#### UML
-Link to an image of the UML for your application and response to events
+* npm test
+* mongo instance must be created prior
