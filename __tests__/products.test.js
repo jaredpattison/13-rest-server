@@ -1,16 +1,16 @@
-const Categories = require('../models/categories.js');
+const Products = require('../src/models/products.js');
 
 const supergoose = require('./supergoose.js');
 
 beforeAll(supergoose.startDB);
 afterAll(supergoose.stopDB);
 
-describe('Categories Model', () => {
+describe('products Model', () => {
 
   it ('can post a new category', () => {
-    let obj = { name: 'Soap', description: 'Cleansing product'};
-    let categories = new Categories();
-    categories.post(obj)
+    let obj = { name: 'Soap', description: 'Cleansing product', price: 4.88};
+    let products = new Products();
+    products.post(obj)
       .then(record => {
         Object.keys(obj).forEach(key => {
           expect(record[key]).toEqual(obj[key]);
@@ -19,11 +19,11 @@ describe('Categories Model', () => {
   });
 
   it ('can get() a category', () => {
-    let obj = { name: 'Soap', description: 'Cleansing product'};
-    let categories = new Categories();
-    categories.post(obj)
+    let obj = { name: 'Soap', description: 'Cleansing product', price: 4.88};
+    let products = new Products();
+    products.post(obj)
       .then(record => {
-        return categories.get(record._id)
+        return products.get(record._id)
           .then(category => {
             Object.keys(obj).forEach(key => {
               expect(category[0][key]).toEqual(obj[key]);
